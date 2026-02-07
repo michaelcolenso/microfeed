@@ -1,13 +1,6 @@
+name = "microfeed"
 compatibility_date = "2025-03-14"
 pages_build_output_dir = "public"
-
-[build]
-command = "corepack enable && yarn install && yarn build:production"
-
-[[ env.development.d1_databases ]]
-binding = "FEED_DB"
-database_name = "FEED_DB"
-database_id = "id_placeholder"
 
 [env.production]
 
