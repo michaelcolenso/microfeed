@@ -73,6 +73,13 @@ function getItemJson(itemObj) {
 export default class FeedDb {
   constructor(env, request) {
     this.FEED_DB = env.FEED_DB;
+    if (!this.FEED_DB) {
+      throw new Error(
+        'D1 database binding "FEED_DB" is not configured. ' +
+        'Please bind a D1 database to this Pages project in the Cloudflare dashboard ' +
+        '(Settings → Functions → D1 database bindings) and redeploy.'
+      );
+    }
 
     const urlObj = new URL(request.url);
     this.baseUrl = urlObj.origin;
