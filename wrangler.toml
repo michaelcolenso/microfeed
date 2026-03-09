@@ -1,4 +1,5 @@
 compatibility_date = "2025-03-14"
+compatibility_flags = ["nodejs_compat"]
 
 [[ env.development.d1_databases ]]
 binding = "FEED_DB"
